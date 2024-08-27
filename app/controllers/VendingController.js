@@ -25,11 +25,8 @@ export class VendingController {
 
   }
 
-  BuySnack() {
-
-
-
-
+  BuySnack(SnackName) {
+    vendingService.BuySnack(SnackName)
   }
 
 

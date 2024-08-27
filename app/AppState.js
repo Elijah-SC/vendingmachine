@@ -19,7 +19,7 @@ class ObservableAppState extends EventEmitter {
     new Snacks(`Starburst`, 3.50, `https://th.bing.com/th/id/OIP.14jK7-9EhU73HJScG3MfDQHaHa?rs=1&pid=ImgDetMain`)
   ]
 
-
+  MySnacks = []
   money = 0
 }
 

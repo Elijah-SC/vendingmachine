@@ -10,7 +10,7 @@ export class Snacks {
     return /*HTML*/`
     
     <sub-section class="col-12 col-lg-6 my-3 d-flex justify-content-around">
-  <button onclick="" class="card" title="buy ${this.name}">
+  <button onclick="app.VendingController.BuySnack(SnackName)" class="card" title="buy ${this.name}">
     <div class="card-body">
       <div class="d-flex justify-content-around">
         <img class="imgs"
