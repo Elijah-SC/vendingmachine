@@ -16,4 +16,11 @@ export class VendingController {
     SnackItemElm.innerHTML = itemHTML
 
   }
+
+
+  Add25Cents() {
+    console.log(`adding 25 cents`)
+    return
+
+  }
 }
