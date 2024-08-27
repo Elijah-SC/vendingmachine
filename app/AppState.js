@@ -7,6 +7,8 @@ class ObservableAppState extends EventEmitter {
 
   examples = []
 
+  /**@type {Snacks[]}*/
+
   snacks = [
 
     new Snacks(`Snickers`, 1.50, `https://th.bing.com/th/id/OIP.damXfF3Vsk8V-93AVgX0LQAAAA?rs=1&pid=ImgDetMain`),
