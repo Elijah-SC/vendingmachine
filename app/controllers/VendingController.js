@@ -8,6 +8,7 @@ export class VendingController {
     console.log(`Vending Controller is Live`)
     this.drawItems()
     AppState.on('money', this.drawMoney)
+    AppState.on(`MySnacks`, this.drawMySnacks)
   }
 
   drawItems() {
@@ -16,17 +17,16 @@ export class VendingController {
     snacks.forEach(snack => itemHTML += snack.itemHTMLTemplate)
     const SnackItemElm = document.getElementById(`VendingMachineItems`)
     SnackItemElm.innerHTML = itemHTML
-
   }
 
   drawMoney() {
     const MoneyElm = document.getElementById(`money`)
     MoneyElm.innerText = AppState.money.toFixed(2).toString()
-
   }
 
   BuySnack(SnackName) {
     vendingService.BuySnack(SnackName)
+
   }
 
 
@@ -34,8 +34,14 @@ export class VendingController {
     console.log(`adding 25 cents`)
 
     vendingService.add25Cents()
+  }
 
-
+  drawMySnacks() {
+    const snacks = AppState.MySnacks
+    let itemHTML = ``
+    snacks.forEach(snack => itemHTML += snack.MySnacksHTMLTemplate)
+    const SnackElm = document.getElementById(`MySnacks`)
+    SnackElm.innerHTML = itemHTML
 
   }
 }

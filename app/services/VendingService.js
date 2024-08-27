@@ -2,7 +2,7 @@ import { AppState } from "../AppState.js"
 
 class VendingService {
   BuySnack(SnackName) {
-    const foundSnack = AppState.snacks.find(Snack => Snack.name = SnackName)
+    const foundSnack = AppState.snacks.find(Snack => Snack.name == SnackName)
     if (AppState.money < foundSnack.price) {
       window.alert(`GET YOUR BROKE A** OUT OF HERE`)
       return
@@ -24,6 +24,8 @@ class VendingService {
 }
 
 export const vendingService = new VendingService()
+
+
 
 
 
