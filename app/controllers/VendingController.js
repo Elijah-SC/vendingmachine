@@ -7,7 +7,7 @@ export class VendingController {
 
     console.log(`Vending Controller is Live`)
     this.drawItems()
-    AppState.on('coins', this.drawMoney)
+    AppState.on('money', this.drawMoney)
   }
 
   drawItems() {
@@ -21,7 +21,14 @@ export class VendingController {
 
   drawMoney() {
     const MoneyElm = document.getElementById(`money`)
-    MoneyElm.innerText = AppState.money.toString()
+    MoneyElm.innerText = AppState.money.toFixed(2).toString()
+
+  }
+
+  BuySnack() {
+
+
+
 
   }
 
@@ -30,6 +37,8 @@ export class VendingController {
     console.log(`adding 25 cents`)
 
     vendingService.add25Cents()
+
+
 
   }
 }
