@@ -1,0 +1,17 @@
+/* BASIC STYLES HERE */
+
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-bottom: unset;
+}
+
+
+.imgs {
+  width: 374px;
+  height: 149px;
+
+}
