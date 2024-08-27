@@ -1,4 +1,5 @@
 import { AppState } from "../AppState.js"
+import { vendingService } from "../services/VendingService.js"
 
 export class VendingController {
 
@@ -6,6 +7,7 @@ export class VendingController {
 
     console.log(`Vending Controller is Live`)
     this.drawItems()
+    AppState.on('coins', this.drawMoney)
   }
 
   drawItems() {
@@ -17,10 +19,17 @@ export class VendingController {
 
   }
 
+  drawMoney() {
+    const MoneyElm = document.getElementById(`money`)
+    MoneyElm.innerText = AppState.money.toString()
+
+  }
+
 
   Add25Cents() {
     console.log(`adding 25 cents`)
-    return
+
+    vendingService.add25Cents()
 
   }
 }
